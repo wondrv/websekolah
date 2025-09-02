@@ -9,7 +9,7 @@
     @foreach($posts as $p)
       <a href="{{ route('posts.show',$p->slug) }}" class="border rounded p-3 hover:bg-gray-50 block">
         @if($p->cover_path)
-          <img src="/{{ $p->cover_path }}" alt="{{ $p->title }}" class="w-full h-36 object-cover rounded mb-2">
+          <img src="/{{ $p->cover_path }}" alt="{{ $p->title }}" class="w-full h-36 object-cover rounded mb-2" loading="lazy" decoding="async" width="640" height="144">
         @endif
         <div class="font-semibold">{{ $p->title }}</div>
         <div class="text-xs text-gray-500">{{ optional($p->published_at)->format('d M Y') }}</div>

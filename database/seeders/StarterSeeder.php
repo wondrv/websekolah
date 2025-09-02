@@ -26,6 +26,16 @@ class StarterSeeder extends Seeder
             'content' => 'Visi... Misi...',
             'published_at' => now(),
         ]);
+        \App\Models\Page::updateOrCreate(['slug' => 'about-us'], [
+            'title' => 'Tentang Kami',
+            'content' => 'Profil singkat sekolah, sejarah, dan nilai inti.',
+            'published_at' => now(),
+        ]);
+        \App\Models\Page::updateOrCreate(['slug' => 'ppdb'], [
+            'title' => 'PPDB',
+            'content' => "Informasi Penerimaan Peserta Didik Baru (PPDB):\n- Syarat pendaftaran\n- Jadwal\n- Alur pendaftaran\n- Kontak panitia",
+            'published_at' => now(),
+        ]);
         \App\Models\Post::firstOrCreate(
             ['slug' => 'uji-coba-berita'],
             [
