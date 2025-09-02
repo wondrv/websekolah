@@ -16,12 +16,18 @@ class EventController extends Controller
         return view('events.index', compact('events'));
     }
 
+    public function adminIndex()
+    {
+        $events = Event::orderBy('starts_at', 'desc')->paginate(12);
+        return view('admin.events.index', compact('events'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+    return view('admin.events.form', ['event' => new Event]);
     }
 
     /**
@@ -29,7 +35,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'starts_at' => 'required|date',
+            'ends_at' => 'nullable|date|after_or_equal:starts_at',
+            'location' => 'nullable|string|max:255',
+            'is_public' => 'nullable|boolean',
+        ]);
+        $data['is_public'] = (bool)($request->input('is_public'));
+        Event::create($data);
+        return redirect()->route('admin.dashboard')->with('ok', 'Event dibuat');
     }
 
     /**
@@ -45,7 +61,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+    return view('admin.events.form', compact('event'));
     }
 
     /**
@@ -53,7 +69,17 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'starts_at' => 'required|date',
+            'ends_at' => 'nullable|date|after_or_equal:starts_at',
+            'location' => 'nullable|string|max:255',
+            'is_public' => 'nullable|boolean',
+        ]);
+        $data['is_public'] = (bool)($request->input('is_public'));
+        $event->update($data);
+        return redirect()->route('admin.dashboard')->with('ok', 'Event diupdate');
     }
 
     /**
@@ -61,6 +87,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+    $event->delete();
+    return back()->with('ok', 'Event dihapus');
     }
 }

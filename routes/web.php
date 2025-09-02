@@ -17,10 +17,15 @@ Route::post('/kontak', [ContactMessageController::class,'store'])->name('contact
 // Admin (butuh login)
 Route::middleware('auth')->group(function(){
   Route::view('/admin','admin.dashboard')->name('admin.dashboard');
+  // Admin lists
+  Route::get('/admin/posts', [PostController::class,'adminIndex'])->name('admin.posts.index');
+  Route::get('/admin/pages', [PageController::class,'adminIndex'])->name('admin.pages.index');
+  Route::get('/admin/events', [EventController::class,'adminIndex'])->name('admin.events.index');
   Route::resource('/admin/posts', PostController::class)->except(['index','show']);
   Route::resource('/admin/events', EventController::class)->except(['index','show']);
   Route::resource('/admin/pages', PageController::class)->except(['show']);
   Route::get('/admin/messages',[ContactMessageController::class,'index'])->name('admin.messages');
+  Route::delete('/admin/messages/{message}',[ContactMessageController::class,'destroy'])->name('admin.messages.destroy');
 });
 
 // Auth sederhana (session)

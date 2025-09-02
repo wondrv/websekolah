@@ -15,6 +15,12 @@ class PageController extends Controller
         //
     }
 
+    public function adminIndex()
+    {
+        $pages = Page::orderBy('slug')->paginate(12);
+        return view('admin.pages.index', compact('pages'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    public function adminIndex()
+    {
+        $posts = Post::latest('created_at')->paginate(12);
+        return view('admin.posts.index', compact('posts'));
+    }
     /**
      * Display a listing of the resource.
      */
