@@ -12,7 +12,7 @@
 
   <header class="border-b bg-white/80 backdrop-blur">
     <div class="hidden md:block bg-sky-700 text-white">
-      <div class="container mx-auto px-4 py-1 text-sm flex items-center justify-between">
+      <div class="container mx-auto px-4 py-4 text-sm flex items-center justify-between">
         <div>
           <span class="opacity-90 mr-3">{{ config('school.address') }}</span>
         </div>
@@ -55,16 +55,13 @@
         <p>{{ config('school.address') }}</p>
         <p>Tel: {{ config('school.phone') }} · Email: {{ config('school.email') }}</p>
       </div>
+
       <div>
-        <div class="font-semibold mb-2">Tautan</div>
-        <ul class="space-y-1">
-          <li><a class="hover:underline" href="{{ route('home') }}">Beranda</a></li>
-          <li><a class="hover:underline" href="{{ route('posts.index') }}">Berita</a></li>
-          <li><a class="hover:underline" href="{{ route('events.index') }}">Agenda</a></li>
-          <li><a class="hover:underline" href="{{ route('pages.show','sejarah') }}">Profil</a></li>
-          <li><a class="hover:underline" href="{{ route('contact.create') }}">Kontak</a></li>
-        </ul>
+
+
+
       </div>
+
       <div>
         <div class="font-semibold mb-2">Layanan</div>
         <ul class="space-y-1">

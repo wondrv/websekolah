@@ -21,4 +21,13 @@
   <textarea name="message" rows="6" class="border p-2 rounded" placeholder="Pesan" required>{{ old('message') }}</textarea>
   <button class="bg-blue-600 text-white px-4 py-2 rounded">Kirim</button>
 </form>
+
+<div class="mt-8">
+  <h2 class="font-semibold text-lg mb-2">Peta Lokasi</h2>
+  <div class="aspect-[16/9] w-full border rounded overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.977938227148!2d112.631!3d-7.130!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDcnNDguMCJTIDExMsKwMzcnNTEuNiJF!5e0!3m2!1sid!2sid!4v{{ time() }}"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
 @endsection

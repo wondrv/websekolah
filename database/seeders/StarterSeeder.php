@@ -36,6 +36,28 @@ class StarterSeeder extends Seeder
             'content' => "Informasi Penerimaan Peserta Didik Baru (PPDB):\n- Syarat pendaftaran\n- Jadwal\n- Alur pendaftaran\n- Kontak panitia",
             'published_at' => now(),
         ]);
+        // Profil Sekolah tambahan
+        \App\Models\Page::updateOrCreate(['slug' => 'struktur-organisasi'], [
+            'title' => 'Struktur Organisasi',
+            'content' => "Kepala Sekolah\nWakil Kepala Sekolah\nGuru\nStaf Tata Usaha\n\n(Struktur detail dapat ditambahkan kemudian)",
+            'published_at' => now(),
+        ]);
+        \App\Models\Page::updateOrCreate(['slug' => 'fasilitas'], [
+            'title' => 'Fasilitas Sekolah',
+            'content' => "Laboratorium, Perpustakaan, Lapangan Olahraga, Mushola, UKS, Ruang Multimedia, dll.",
+            'published_at' => now(),
+        ]);
+        \App\Models\Page::updateOrCreate(['slug' => 'prestasi'], [
+            'title' => 'Prestasi Sekolah',
+            'content' => "Daftar prestasi akademik dan non-akademik siswa dan sekolah.",
+            'published_at' => now(),
+        ]);
+        // Informasi Akademik tambahan
+        \App\Models\Page::updateOrCreate(['slug' => 'jadwal-kegiatan'], [
+            'title' => 'Jadwal Kegiatan',
+            'content' => "Jadwal ekstrakurikuler mingguan dan agenda kegiatan tahunan.\n\n(Silakan diperbarui oleh admin)",
+            'published_at' => now(),
+        ]);
         \App\Models\Post::firstOrCreate(
             ['slug' => 'uji-coba-berita'],
             [
