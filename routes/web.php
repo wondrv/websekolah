@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function(){
   Route::get('/admin/events', [EventController::class,'adminIndex'])->name('admin.events.index');
   Route::resource('/admin/posts', PostController::class)->except(['index','show']);
   Route::resource('/admin/events', EventController::class)->except(['index','show']);
-  Route::resource('/admin/pages', PageController::class)->except(['show']);
+  Route::resource('/admin/pages', PageController::class)->except(['index','show']);
   Route::get('/admin/messages',[ContactMessageController::class,'index'])->name('admin.messages');
   Route::delete('/admin/messages/{message}',[ContactMessageController::class,'destroy'])->name('admin.messages.destroy');
 });

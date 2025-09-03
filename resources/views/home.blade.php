@@ -4,7 +4,7 @@
     <section class="relative overflow-hidden rounded-lg border bg-gradient-to-r from-sky-50 to-white">
         <div class="p-8 md:p-12 grid md:grid-cols-2 gap-6 items-center">
             <div>
-                <div class="text-sm text-sky-700 font-semibold mb-2">Selamat Datang</div>
+                <div class="text-base text-sky-700 font-semibold mb-2">Selamat Datang</div>
                 <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-3">{{ config('school.name') }}</h1>
                 <p class="text-gray-700 mb-5">Sekolah unggul dengan lingkungan belajar yang religius, disiplin, dan
                     berprestasi.</p>
@@ -43,22 +43,35 @@
     </section>
 
     <section class="mt-10 grid grid-cols-1 gap-6">
-        <div class="border rounded p-5">
+        <div class="border rounded p-6">
+            <div class="text-sky-700 text-sm font-semibold mb-1">Core Value</div>
+            <div class="font-bold mb-1">Nilai Inti Sekolah</div>
+            <p class="text-gray-700">Integritas, disiplin, religius, dan semangat berprestasi menjadi landasan utama dalam setiap aktivitas di {{ config('school.name') }}.</p>
+        </div>
+        <div class="border rounded p-6">
+            <div class="text-sky-700 text-sm font-semibold mb-1">Sekilas Tentang Kami</div>
+            <div class="font-bold mb-1">Profil Sekolah</div>
+            <p class="text-gray-700">Kami adalah sekolah yang berkomitmen pada pendidikan berkualitas, lingkungan religius, dan pengembangan karakter siswa.</p>
+        </div>
+        <div class="border rounded p-6">
             <div class="text-sky-700 text-sm font-semibold mb-1">Program Unggulan</div>
             <div class="font-bold mb-1">Tahfidz & Literasi</div>
-            <div class="flex items-center justify-center">
-            </div>
-            <p class="text-gray-700">Mendukung pembentukan karakter dan kompetensi siswa melalui pembiasaan harian.</p>
+            <p class="text-gray-700">Mendukung pembentukan karakter dan kompetensi siswa melalui pembiasaan harian dan program unggulan sekolah.</p>
         </div>
-        <div class="border rounded p-5">
+        <div class="border rounded p-6">
             <div class="text-sky-700 text-sm font-semibold mb-1">Galeri</div>
-            <div class="font-bold mb-1">Kegiatan Siswa</div>
-            <p class="text-gray-700">Dokumentasi event, ekstrakurikuler, dan karya siswa.</p>
+            <div class="font-bold mb-1">Kegiatan & Prestasi</div>
+            <p class="text-gray-700">Dokumentasi event, ekstrakurikuler, dan karya siswa yang membanggakan sekolah.</p>
         </div>
-        <div class="border rounded p-5">
+        <div class="border rounded p-6">
+            <div class="text-sky-700 text-sm font-semibold mb-1">Blog</div>
+            <div class="font-bold mb-1">Berita & Artikel</div>
+            <p class="text-gray-700">Informasi terbaru, berita sekolah, dan artikel inspiratif untuk seluruh warga sekolah.</p>
+        </div>
+        <div class="border rounded p-6">
             <div class="text-sky-700 text-sm font-semibold mb-1">Testimoni</div>
-            <div class="font-bold mb-1">Suara Orang Tua</div>
-            <p class="text-gray-700">Pengalaman belajar yang menyenangkan dan bermakna.</p>
+            <div class="font-bold mb-1">Suara Orang Tua & Alumni</div>
+            <p class="text-gray-700">Pengalaman belajar yang menyenangkan dan bermakna dari orang tua serta alumni sekolah.</p>
         </div>
     </section>
 
