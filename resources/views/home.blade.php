@@ -33,9 +33,9 @@
             <div>
                 <div class="text-sky-700 font-semibold mb-2">Sambutan Kepala Sekolah</div>
                 <p class="text-gray-700 mb-2">
-                    Assalamu'alaikum warahmatullahi wabarakatuh. Selamat datang di website resmi
+                    "Assalamu'alaikum warahmatullahi wabarakatuh. Selamat datang di website resmi
                     {{ config('school.name') }}. Kami berkomitmen menciptakan lingkungan belajar yang inspiratif, religius,
-                    dan berprestasi. Semoga informasi di sini bermanfaat bagi seluruh warga sekolah dan masyarakat.
+                    dan berprestasi. Semoga informasi di sini bermanfaat bagi seluruh warga sekolah dan masyarakat."
                 </p>
                 <div class="mt-3 font-semibold text-sky-600">Kepala Sekolah</div>
             </div>

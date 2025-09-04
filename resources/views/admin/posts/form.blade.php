@@ -34,7 +34,7 @@
   </div>
   <div class="flex gap-2">
     <button class="bg-blue-600 text-white px-4 py-2 rounded">{{ $post->id ? 'Update' : 'Simpan' }}</button>
-    <a href="{{ route('admin.dashboard') }}" class="px-4 py-2 border rounded">Batal</a>
+  <a href="{{ route('admin.dashboard') }}" class="px-4 py-2 border rounded">Kembali ke Dashboard</a>
   </div>
 </form>
 <script>previewImage('cover','coverPreview')</script>

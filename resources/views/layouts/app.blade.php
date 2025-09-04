@@ -64,6 +64,7 @@
     <div class="container mx-auto grid gap-6 md:grid-cols-3">
         <div>
             <div class="font-semibold mb-2">{{ config('school.name') }}</div>
+            <img src="{{ asset('images/logosekolah.png') }}" alt="Logo {{ config('school.name') }}" class="mb-3 w-14 h-auto">
             <p>{{ config('school.name') }} adalah sekolah berbasis islami unggul prestasi. Terletak di Provinsi Jawa Timur, Kabupaten Sidoarjo, Kecamatan Taman. Berbekal Keahlian Kompetensi dengan menerapkan berbudaya Islam.</p>
             <p>Motto: The Excellent School bagian dari Visi.</p>
             <p>Visi Misi: Sholeh Dalam Perilaku, Unggul Dalam Mutu dan Berdaya Saing Global.</p>

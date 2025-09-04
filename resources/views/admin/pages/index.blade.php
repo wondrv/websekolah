@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('title','Pages (Admin)')
 @section('content')
+<div class="mb-2">
+  <a href="{{ route('admin.dashboard') }}" class="inline-flex items-center text-sm text-gray-600 hover:text-gray-800">
+    <span class="mr-1">&#8592;</span> Kembali ke Dashboard
+  </a>
+  </div>
 <div class="flex items-center justify-between mb-4">
   <h1 class="text-2xl font-bold">Pages</h1>
   <a href="{{ route('pages.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded">Tambah Halaman</a>

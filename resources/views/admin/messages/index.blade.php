@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('title','Inbox Pesan')
 @section('content')
+<div class="mb-2">
+  <a href="{{ route('admin.dashboard') }}" class="inline-flex items-center text-sm text-gray-600 hover:text-gray-800">
+    <span class="mr-1">&#8592;</span> Kembali ke Dashboard
+  </a>
+</div>
 <h1 class="text-2xl font-bold mb-4">Inbox Pesan</h1>
 @if(session('ok'))
   <div class="p-3 mb-4 border bg-green-50 text-green-700 rounded">{{ session('ok') }}</div>
